@@ -7,28 +7,26 @@ function App() {
     <div style={styles.container}>
       <div style={styles.containermid}>
         <div>
-          <p style={styles.texts_name}>Faiq Ghozy Erlangga</p>
+          <p style={styles.texts_name} className="text-5xl font-semibold">Faiq Ghozy Erlangga</p>
         </div>
-        <div>
-          <p style={styles.texts}>halo</p>
+
+        <div className="content-end space-y-4">
+          <p style={styles.texts} className="text-2xl">About</p>
+          <p style={styles.texts} className="text-2xl">Project</p>
         </div>
       </div>
-    </div>
+    </div >
   );
 }
 
 
 const styles = {
   texts_name: {
-    color: "#2C3930",
-    alignItems: "",
-    // padding: "20px"
+    color: "#3F4F44",
   },
 
   texts: {
-    color: "black",
-    alignItems: "black",
-    // padding: "20px"
+    color: "#3F4F44",
   },
 
   container: {
@@ -39,7 +37,6 @@ const styles = {
     boxShadow: "inset 0 0 0 5px #A27B5C",
     display: "flex",
     justifyContent: "center",
-    // alignItems: "center",
     backgroundColor: "#DCD7C9",
     boxSizing: "border-box",
   },
@@ -48,7 +45,11 @@ const styles = {
     display: "flex",
     flexDirection: "row",
     justifyContent: "space-between",
-    width: "80%"
+    width: "100%",
+    paddingTop: "5%",
+    paddingBottom: "5%",
+    paddingLeft: "5%",
+    paddingRight: "5%"
   }
 }
 
