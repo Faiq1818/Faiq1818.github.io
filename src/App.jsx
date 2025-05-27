@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import './App.css'
+import RightDownButton from './components/rightDownButton';
 
 
 function App() {
@@ -10,10 +11,7 @@ function App() {
           <p style={styles.texts_name} className="text-5xl font-semibold">Faiq Ghozy Erlangga</p>
         </div>
 
-        <div className="content-end space-y-4">
-          <p style={styles.texts} className="text-2xl">About</p>
-          <p style={styles.texts} className="text-2xl">Project</p>
-        </div>
+        <RightDownButton />
       </div>
     </div >
   );
