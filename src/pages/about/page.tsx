@@ -1,9 +1,6 @@
-import BottomIcon from "./bottomIcon";
-import MiddleBar from "./middleBar";
-import TopSection from "./topSection";
-
-export default function Home() {
+export default function About() {
   return (
+    <>
       <div
         className="flex flex-col h-screen w-screen overflow-hidden bg-[#000000] p-6"
         style={{
@@ -11,9 +8,7 @@ export default function Home() {
           boxShadow: "inset 0 0 0 0.2px #ffffff",
         }}
       >
-        <TopSection />
-        <MiddleBar />
-        <BottomIcon />
       </div>
+    </>
   );
 }

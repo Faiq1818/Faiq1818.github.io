@@ -1,11 +1,20 @@
+import { createBrowserRouter } from "react-router";
 import Home from "./pages/home/page";
+import About from "./pages/about/page";
 
-function App() {
-  return (
-    <>
-      <Home />
-    </>
-  );
-}
+const AppRoutes = createBrowserRouter([
+  {
+    path: "/",
+    element: <Home/>,
+  },
+  {
+    path: "/about",
+    element: <About/>,
+  },
+  {
+    path: "*",
+    element: <div>Not Found</div>,
+  },
+]);
 
-export default App;
+export default AppRoutes;
