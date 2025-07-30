@@ -6,6 +6,8 @@ export default function Home() {
           <div>
             <p className="text-5xl font-semibold text-[#c4c4c4]">Faiq Ghozy Erlangga</p>
           </div>
+          <div>
+          </div>
         </div>
       </div>
     </>
