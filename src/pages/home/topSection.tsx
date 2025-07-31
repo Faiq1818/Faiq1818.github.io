@@ -10,7 +10,7 @@ export default function TopSection() {
 
   return (
     <div className="flex flex-row justify-between">
-      <p className="text-4xl font-semibold text-[#c4c4c4]">
+      <p className="text-4xl font-semibold text-white">
         Faiq Ghozy Erlangga
       </p>
       <div className="flex flex-row">
