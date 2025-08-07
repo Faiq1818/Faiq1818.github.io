@@ -25,7 +25,7 @@ const categories = [
       {
         id: 1,
         title: 'Wonderfull',
-        image: '../../../public/images/wonderful1.png',
+        image: '/images/wonderful1.png',
         description: 'A Rust-based launcher that can start multiple applications at once. This is my first open source project, it is TUI application written in Rust using Ratatui library for graphical rendering.',
         techstack: 'Rust, Ratatui',
       },
