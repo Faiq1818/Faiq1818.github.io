@@ -4,28 +4,19 @@ const categories = [
   {
     name: 'Frontend',
     posts: [
-      {
-        id: 1,
-        title: 'Tokoizi Online Shop',
-      },
+
     ],
   },
   {
     name: 'Backend',
     posts: [
-      {
-        id: 1,
-        title: '(Backend) Tokoizi Online Shop',
-      },
+
     ],
   },
   {
     name: 'Mobile Apps Development',
     posts: [
-      {
-        id: 1,
-        title: 'PocketBootleg',
-      },
+
     ],
   },
   {
@@ -34,6 +25,9 @@ const categories = [
       {
         id: 1,
         title: 'Wonderfull',
+        image: '../../../public/images/wonderful1.png',
+        description: 'A Rust-based launcher that can start multiple applications at once. This is my first open source project, it is TUI application written in Rust using Ratatui library for graphical rendering.',
+        techstack: 'Rust, Ratatui',
       },
     ],
   },
@@ -60,12 +54,14 @@ export default function selectProject() {
                 <ul>
                   {posts.map((post) => (
                     <li key={post.id} className="relative rounded-md p-3 text-sm/6 transition hover:bg-white/5">
-                      <a href="#" className="font-semibold text-white">
+                      <a href="#" className="font-semibold text-white text-lg">
                         <span className="absolute inset-0" />
                         {post.title}
                       </a>
+                      <img className='rounded-lg mt-4' src={post.image} alt="Logo" />
+                      <p className='text-white/80 my-2'>{post.description}</p>
                       <ul className="flex gap-2 text-white/50" aria-hidden="true">
-                        <li aria-hidden="true">&middot;</li>
+                        <li aria-hidden="true">- {post.techstack}</li>
                       </ul>
                     </li>
                   ))}
