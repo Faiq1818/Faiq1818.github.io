@@ -13,6 +13,7 @@ export default function TopSection() {
       <p className="text-4xl font-semibold text-white">
         Faiq Ghozy Erlangga
       </p>
+       
       <div className="flex flex-row">
         <div className="flex cursor-pointer flex-row items-center text-[#818181] hover:text-[#BABABA]">
           <MdDarkMode />
