@@ -1,4 +1,4 @@
-import { Dialog, DialogPanel, DialogTitle } from "@headlessui/react";
+import { Button, Dialog, DialogPanel, DialogTitle } from '@headlessui/react'
 import { useState } from "react";
 import { IoLanguage } from "react-icons/io5";
 import { MdDarkMode } from "react-icons/md";
@@ -7,6 +7,14 @@ import { Switch } from "@headlessui/react";
 export default function TopSection() {
   let [isOpen, setIsOpen] = useState(false);
   const [enabled, setEnabled] = useState(false);
+
+  function open() {
+    setIsOpen(true)
+  }
+
+  function close() {
+    setIsOpen(false)
+  }
 
   return (
     <div className="flex flex-row justify-between">
@@ -25,42 +33,43 @@ export default function TopSection() {
             <span className="size-3 translate-x-1 rounded-full bg-[#c4c4c4] transition group-data-checked:translate-x-6" />
           </Switch>
         </div>
-        <div className="flex cursor-pointer flex-row items-center text-[#818181] hover:text-[#BABABA] ml-5" onClick={() => setIsOpen(true)}>
+        <div className="flex cursor-pointer flex-row items-center text-[#818181] hover:text-[#BABABA] ml-5" onClick={open}>
           <IoLanguage size={"1.2em"} />
           <p className="ml-2 pr-3">English</p>
         </div>
       </div>
 
-      <>
-        <Dialog
-          open={isOpen}
-          onClose={() => setIsOpen(false)}
-          transition
-          className="fixed inset-0 flex w-screen items-center justify-center z-50 bg-black/45 p-4 transition duration-300 ease-out data-closed:opacity-0"
-        >
-          <div className="fixed inset-0 flex w-screen items-center justify-center p-4">
-            <DialogPanel className="max-w-lg space-y-4 border bg-white p-12">
-              <DialogTitle className="font-bold items-center">
-                Choose a language
-              </DialogTitle>
-              <div className="flex gap-4">
-                <button
-                  className="cursor-pointer"
-                  onClick={() => setIsOpen(false)}
+      <Dialog open={isOpen} as="div" className="relative z-10 focus:outline-none" onClose={close}>
+        <div className="fixed inset-0 z-10 w-screen overflow-y-auto">
+          <div className="flex min-h-full items-center justify-center p-4">
+            <DialogPanel
+              transition
+              className="w-full max-w-md rounded-xl bg-white/5 p-6 backdrop-blur-2xl duration-300 ease-out data-closed:transform-[scale(95%)] data-closed:opacity-0"
+            >
+              <div className="flex flex-row justify-between">
+                <DialogTitle as="h3" className="text-base/7 font-medium text-white">
+                  Choose a language
+                </DialogTitle>
+                <Button
+                  className="inline-flex items-center gap-2 rounded-full px-2 py-1 text-sm font-semibold text-white shadow-white/10 focus:not-data-focus:outline-none data-focus:outline  data-hover:text-gray-400"
+                  onClick={close}
                 >
-                  English
-                </button>
-                <button
-                  className="cursor-pointer"
-                  onClick={() => setIsOpen(false)}
-                >
-                  Bahasa Indonesia
-                </button>
+                  x
+                </Button>
+              </div>
+
+              <div className="mt-2 text-sm/6 text-white/80">
+                English
+              </div>
+              <div className="mt-2 text-sm/6 text-white/80">
+                Bahasa Indonesia
+              </div>
+              <div className="mt-4">
               </div>
             </DialogPanel>
           </div>
-        </Dialog>
-      </>
+        </div>
+      </Dialog>
     </div>
   );
 }
