@@ -7,8 +7,7 @@ export default function About() {
           border: "30px solid #000000",
           boxShadow: "inset 0 0 0 0.2px #ffffff",
         }}
-      >
-      </div>
+      ></div>
     </>
   );
 }

@@ -1,4 +1,4 @@
-import { Button, Dialog, DialogPanel, DialogTitle } from '@headlessui/react'
+import { Button, Dialog, DialogPanel, DialogTitle } from "@headlessui/react";
 import { useState } from "react";
 import { IoLanguage } from "react-icons/io5";
 import { MdDarkMode } from "react-icons/md";
@@ -9,19 +9,17 @@ export default function TopSection() {
   const [enabled, setEnabled] = useState(false);
 
   function open() {
-    setIsOpen(true)
+    setIsOpen(true);
   }
 
   function close() {
-    setIsOpen(false)
+    setIsOpen(false);
   }
 
   return (
     <div className="flex flex-row justify-between">
-      <p className="text-4xl font-semibold text-white">
-        Faiq Ghozy Erlangga
-      </p>
-       
+      <p className="text-4xl font-semibold text-white">Faiq Ghozy Erlangga</p>
+
       <div className="flex flex-row">
         <div className="flex cursor-pointer flex-row items-center text-[#818181] hover:text-[#BABABA]">
           <MdDarkMode />
@@ -33,13 +31,21 @@ export default function TopSection() {
             <span className="size-3 translate-x-1 rounded-full bg-[#c4c4c4] transition group-data-checked:translate-x-6" />
           </Switch>
         </div>
-        <div className="flex cursor-pointer flex-row items-center text-[#818181] hover:text-[#BABABA] ml-5" onClick={open}>
+        <div
+          className="flex cursor-pointer flex-row items-center text-[#818181] hover:text-[#BABABA] ml-5"
+          onClick={open}
+        >
           <IoLanguage size={"1.2em"} />
           <p className="ml-2 pr-3">English</p>
         </div>
       </div>
 
-      <Dialog open={isOpen} as="div" className="relative z-10 focus:outline-none" onClose={close}>
+      <Dialog
+        open={isOpen}
+        as="div"
+        className="relative z-10 focus:outline-none"
+        onClose={close}
+      >
         <div className="fixed inset-0 z-10 w-screen overflow-y-auto">
           <div className="flex min-h-full items-center justify-center p-4">
             <DialogPanel
@@ -47,7 +53,10 @@ export default function TopSection() {
               className="w-full max-w-md rounded-xl bg-white/5 p-6 backdrop-blur-2xl duration-300 ease-out data-closed:transform-[scale(95%)] data-closed:opacity-0"
             >
               <div className="flex flex-row justify-between">
-                <DialogTitle as="h3" className="text-base/7 font-medium text-white">
+                <DialogTitle
+                  as="h3"
+                  className="text-base/7 font-medium text-white"
+                >
                   Choose a language
                 </DialogTitle>
                 <Button
@@ -58,14 +67,11 @@ export default function TopSection() {
                 </Button>
               </div>
 
-              <div className="mt-2 text-sm/6 text-white/80">
-                English
-              </div>
+              <div className="mt-2 text-sm/6 text-white/80">English</div>
               <div className="mt-2 text-sm/6 text-white/80">
                 Bahasa Indonesia
               </div>
-              <div className="mt-4">
-              </div>
+              <div className="mt-4"></div>
             </DialogPanel>
           </div>
         </div>

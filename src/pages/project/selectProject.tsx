@@ -1,37 +1,32 @@
-import { Tab, TabGroup, TabList, TabPanel, TabPanels } from '@headlessui/react'
+import { Tab, TabGroup, TabList, TabPanel, TabPanels } from "@headlessui/react";
 
 const categories = [
   {
-    name: 'Frontend',
-    posts: [
-
-    ],
+    name: "Frontend",
+    posts: [],
   },
   {
-    name: 'Backend',
-    posts: [
-
-    ],
+    name: "Backend",
+    posts: [],
   },
   {
-    name: 'Mobile Apps Development',
-    posts: [
-
-    ],
+    name: "Mobile Apps Development",
+    posts: [],
   },
   {
-    name: 'Open Source Software',
+    name: "Open Source Software",
     posts: [
       {
         id: 1,
-        title: 'Wonderfull',
-        image: '/images/wonderful1.png',
-        description: 'A Rust-based launcher that can start multiple applications at once. This is my first open source project, it is TUI application written in Rust using Ratatui library for graphical rendering.',
-        techstack: 'Rust, Ratatui',
+        title: "Wonderfull",
+        image: "/images/wonderful1.png",
+        description:
+          "A Rust-based launcher that can start multiple applications at once. This is my first open source project, it is TUI application written in Rust using Ratatui library for graphical rendering.",
+        techstack: "Rust, Ratatui",
       },
     ],
   },
-]
+];
 
 export default function selectProject() {
   return (
@@ -53,14 +48,24 @@ export default function selectProject() {
               <TabPanel key={name} className="rounded-xl bg-white/5 p-3">
                 <ul>
                   {posts.map((post) => (
-                    <li key={post.id} className="relative rounded-md p-3 text-sm/6 transition hover:bg-white/5">
+                    <li
+                      key={post.id}
+                      className="relative rounded-md p-3 text-sm/6 transition hover:bg-white/5"
+                    >
                       <a href="#" className="font-semibold text-white text-lg">
                         <span className="absolute inset-0" />
                         {post.title}
                       </a>
-                      <img className='rounded-lg mt-4' src={post.image} alt="Logo" />
-                      <p className='text-white/80 my-2'>{post.description}</p>
-                      <ul className="flex gap-2 text-white/50" aria-hidden="true">
+                      <img
+                        className="rounded-lg mt-4"
+                        src={post.image}
+                        alt="Logo"
+                      />
+                      <p className="text-white/80 my-2">{post.description}</p>
+                      <ul
+                        className="flex gap-2 text-white/50"
+                        aria-hidden="true"
+                      >
                         <li aria-hidden="true">- {post.techstack}</li>
                       </ul>
                     </li>
@@ -72,5 +77,5 @@ export default function selectProject() {
         </TabGroup>
       </div>
     </div>
-  )
+  );
 }

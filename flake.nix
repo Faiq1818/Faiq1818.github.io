@@ -18,14 +18,11 @@
     in
       pkgs.mkShell {
         packages = with pkgs; [
-          typescript
           typescript-language-server
           nodejs_24
         ];
 
         shellHook = ''
-          echo "tls: `typescript-language-server --version`"
-          echo "tsc: `tsc --version`"
           exec zsh
         '';
       };

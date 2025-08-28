@@ -6,15 +6,15 @@ import Project from "./pages/project/page";
 const AppRoutes = createBrowserRouter([
   {
     path: "/",
-    element: <Home/>,
+    element: <Home />,
   },
   {
     path: "/about",
-    element: <About/>,
+    element: <About />,
   },
   {
     path: "/project",
-    element: <Project/>,
+    element: <Project />,
   },
   {
     path: "*",
